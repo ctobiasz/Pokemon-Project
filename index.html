@@ -15,27 +15,70 @@
 </pciture>
 </div>
 
-<!-- <div class="modal"> -->
+   <!-- GRID OF POKEMONS -->
     <div class="container">
       <div class="row">
         <div class="col-lg-4 centered">
           <img src="https://cdn.bulbagarden.net/upload/thumb/d/d7/448Lucario.png/250px-448Lucario.png"
-          class="blue">
-        <p class="img-dsc">  Lucario </p>
+          class="pics1 btn1" data-toggle="modal" data-target="#myModal">
         </div>
         <div class="col-lg-4 centered">
           <img src="https://cdn.bulbagarden.net/upload/thumb/c/c6/094Gengar.png/250px-094Gengar.png"
-          class="img-thumbnail purple">
-        <p class="img-dsc">  Gengar </p>
+          class="pics1 btn2" data-toggle="modal" data-target="#myModal">
+
         </div>
         <div class="col-lg-4 centered">
-          <img src="https://cdn.bulbagarden.net/upload/5/55/212Scizor.png"
-          class="red">
-      <p class="img-dsc">  Scizor </p>
+          <img src="scizor.png"
+          class="pics1 btn3" data-toggle="modal" data-target="#myModal" onclick="getScizor()">
         </div>
       </div>
     </div>
-  <!-- </div> -->
+
+    <!-- Modal -->
+ <div class="modal fade" id="myModal" role="dialog">
+   <div class="modal-dialog">
+
+<!-- HEADER FOR MODAL -->
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+       </div>
+
+       <!-- INPUTING PIC AND STATS -->
+       <div class="modal-body">
+           <div class="container2">
+             <div class="row">
+
+               <div class="col-lg-6">
+                 <img src="" id="sprite">
+
+               <div class="col-lg-6">
+                 <span>Name: </span>
+                 <span id="pokeName"></span>
+                 <span>Attack: </span>
+                 <span id="pokeAttack"></span>
+                 <span>Defense: </span>
+                 <span id="pokeDefense"></span>
+                 <span>Ability1: </span>
+                 <span id="pokeAbility1"></span>
+                 <span>Ability2: </span>
+                 <span id="pokeAbility2"></span>
+                 <span>Ability3: </span>
+                 <span id="pokeAbility3"></span>
+
+               </div>
+           </div>
+
+       </div>
+     </div>
+
+   </div>
+ </div>
+
+</div>
+
+
+
 
 
 

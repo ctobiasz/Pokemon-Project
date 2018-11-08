@@ -15,40 +15,30 @@ body {
   padding-top: 200px;
 }
 
-
-.img-dsc {
-  text-align: center;
-  color: #FFCB9A;
-  font-size: 1.3em;
-  font-family: sans-serif;
-}
-
-
-.blue, .purple, .red {
+.pics1 {
   width: 100%;
   height: auto;
-  border: 2px solid #FFCB9A;
 }
 
-
-.blue {
-  background-image: url("https://images.all-free-download.com/images/graphiclarge/nostalgic_blue_background_03_hd_picture_169784.jpg");
+.btn1 {
+  background-color: #2C3531;
 }
 
-.purple {
-  background-image: url("https://i.ytimg.com/vi/SLtM4OObCp4/maxresdefault.jpg");
-}
-
-.red {
-  background-image: url("https://image.freepik.com/free-vector/red-background-with-diamond-effect_23-2147618257.jpg");
-}
-
-
-div .blue:hover, .purple:hover, .red:hover {
+div .btn1:hover, .btn2:hover, .btn3:hover {
   transform: scale(1.1);
 }
 
+.container2 {
+  display: flex;
+  justify-content: center;
+  width: ;
+  height: 200px;
+}
 
+#lucio1 {
+  width: auto;
+  height: 200px;
+}
 
 
 

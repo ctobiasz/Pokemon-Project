@@ -101,7 +101,6 @@ function getScizor() {
         if (this.readyState == 4 && this.status == 200) {
           data = JSON.parse(this.responseText);
           // console.log(data);
-          {
             let scizor = {
               name: data.name,
               attack: data.stats[4].base_stat,
@@ -112,11 +111,32 @@ function getScizor() {
             }
             console.log(scizor);
             POKEMON.push(scizor);
-          }
+
+            writeToScreen(scizor);
 
         }
     };
     xhttp.open("GET", "http://fizal.me/pokeapi/api/v2/name/scizor.json", true);
     xhttp.send();
+
+}
+
+
+function writeToScreen(pokemon) {
+  // grab html elements
+  // change innerHTML for each element to current pokemon property
+
+   var sprite = document.getElementById("sprite");
+   var pokeName = document.getElementById("pokeName");
+   var pokeAttack = document.getElementById("pokeAttack");
+   var pokeDefense = document.getElementById("pokeDefense");
+   var pokeAbility1 = document.getElementById("");
+   // var pokeAbility2 = document.getElementById("pokeName");
+   // var pokeAbility3 = document.getElementById("pokeName");
+
+   pokeName.innerHTML = pokemon.name;
+   pokeAttack.innerHTML = pokemon.attack;
+
+
 
 }
