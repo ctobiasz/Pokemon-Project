@@ -55,8 +55,8 @@ function getLucario() {
               ability3: data.abilities[2].ability.name
             }
             console.log(lucario);
-          POKEMON.push(lucario);
-
+            POKEMON.push(lucario);
+            writeToScreen(lucario);
       }
          }
     };
@@ -64,7 +64,7 @@ function getLucario() {
     xhttp.send();
 };
 
-
+console.log(data);
  // ==========================
 //GETING GENGAR FROM POKEMONAPI
 function getGengar() {
@@ -83,6 +83,7 @@ function getGengar() {
             }
             console.log(gengar);
             POKEMON.push(gengar);
+            writeToScreen(gengar);
           }
 
         }
@@ -111,7 +112,6 @@ function getScizor() {
             }
             console.log(scizor);
             POKEMON.push(scizor);
-
             writeToScreen(scizor);
 
         }
@@ -130,13 +130,42 @@ function writeToScreen(pokemon) {
    var pokeName = document.getElementById("pokeName");
    var pokeAttack = document.getElementById("pokeAttack");
    var pokeDefense = document.getElementById("pokeDefense");
-   var pokeAbility1 = document.getElementById("");
-   // var pokeAbility2 = document.getElementById("pokeName");
-   // var pokeAbility3 = document.getElementById("pokeName");
+   var pokeAbility1 = document.getElementById("pokeAbility1");
+   var pokeAbility2 = document.getElementById("pokeAbility2");
+   var pokeAbility3 = document.getElementById("pokeAbility3");
 
    pokeName.innerHTML = pokemon.name;
    pokeAttack.innerHTML = pokemon.attack;
-
-
+   pokeDefense.innerHTML = pokemon.defense;
+   pokeAbility1.innerHTML = pokemon.ability1;
+   pokeAbility2.innerHTML = pokemon.ability2;
+   pokeAbility3.innerHTML = pokemon.ability3;
+   
 
 }
+
+
+
+
+
+
+// //this function brings data to the html
+// // pokemon is a arbitary argument that will basically overridden
+// //by your pokemon name
+//
+// function writeToScreen(pokemon) {
+//   // GRAB HTML elements
+//   //Hint: make new spans/divs/<p> and give it an ID and grab it
+//   // make them variables
+//   var (exampleName) = (GRAB ID INTO HERE);
+//   // ** READ ** if you need a better idea
+//   // https://www.w3schools.com/js/js_htmldom_elements.asp
+//
+//   //=====================
+//   // after you grab you must relay this info into the element
+//   // use the variable name and put it into the html
+//   // ** READ ** if you need a better idea
+//   // https://www.w3schools.com/jsref/prop_html_innerhtml.asp
+//
+//
+// }

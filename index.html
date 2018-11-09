@@ -19,12 +19,12 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 centered">
-          <img src="https://cdn.bulbagarden.net/upload/thumb/d/d7/448Lucario.png/250px-448Lucario.png"
-          class="pics1 btn1" data-toggle="modal" data-target="#myModal">
+          <img src="https://cdn.bulbagarden.net/upload/d/d7/448Lucario.png"
+          class="pics1 btn1" data-toggle="modal" data-target="#myModal" onclick="getLucario()">
         </div>
         <div class="col-lg-4 centered">
           <img src="https://cdn.bulbagarden.net/upload/thumb/c/c6/094Gengar.png/250px-094Gengar.png"
-          class="pics1 btn2" data-toggle="modal" data-target="#myModal">
+          class="pics1 btn2" data-toggle="modal" data-target="#myModal" onclick="getGengar()">
 
         </div>
         <div class="col-lg-4 centered">
@@ -49,21 +49,26 @@
            <div class="container2">
              <div class="row">
 
-               <div class="col-lg-6">
+               <div class="col-lg-8">
                  <img src="" id="sprite">
 
-               <div class="col-lg-6">
-                 <span>Name: </span>
+               <div class="col-lg-4 justify-content-end">
+                 <span class="bold">Name: </span>
                  <span id="pokeName"></span>
-                 <span>Attack: </span>
+                 <br>
+                 <span class="bold">Attack: </span>
                  <span id="pokeAttack"></span>
-                 <span>Defense: </span>
+                 <br>
+                 <span class="bold">Defense: </span>
                  <span id="pokeDefense"></span>
-                 <span>Ability1: </span>
+                 <br>
+                 <span class="bold">Ability1: </span>
                  <span id="pokeAbility1"></span>
-                 <span>Ability2: </span>
+                 <br>
+                 <span class="bold">Ability2: </span>
                  <span id="pokeAbility2"></span>
-                 <span>Ability3: </span>
+                 <br>
+                 <span class="bold">Ability3: </span>
                  <span id="pokeAbility3"></span>
 
                </div>

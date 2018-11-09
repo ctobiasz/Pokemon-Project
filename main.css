@@ -32,12 +32,17 @@ div .btn1:hover, .btn2:hover, .btn3:hover {
   display: flex;
   justify-content: center;
   width: ;
-  height: 200px;
+  height: 350px;
 }
 
 #lucio1 {
   width: auto;
   height: 200px;
+}
+
+ .bold {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 
