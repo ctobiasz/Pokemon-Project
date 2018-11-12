@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
     <link rel="stylesheet" href="main.css">
     <title>Pokemon Project</title>
   </head>
@@ -11,7 +12,7 @@
 
 <div id="mainHead">
     <picture>
-      <img id="center-block" src="Pokedex.png">
+      <img id="center-block" src="pokedex2.png">
 </pciture>
 </div>
 
@@ -19,40 +20,38 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 centered">
-          <img src="https://cdn.bulbagarden.net/upload/d/d7/448Lucario.png"
-          class="pics1 btn1" data-toggle="modal" data-target="#myModal" onclick="getLucario()">
+          <img src="https://cdn.bulbagarden.net/upload/1/12/356Dusclops.png"
+          class="pics1 btn1" data-toggle="modal" data-target="#myModal" onclick="getDusclops()">
         </div>
         <div class="col-lg-4 centered">
-          <img src="https://cdn.bulbagarden.net/upload/thumb/c/c6/094Gengar.png/250px-094Gengar.png"
+          <img src="https://cdn.bulbagarden.net/upload/c/c6/094Gengar.png"
           class="pics1 btn2" data-toggle="modal" data-target="#myModal" onclick="getGengar()">
 
         </div>
         <div class="col-lg-4 centered">
-          <img src="scizor.png"
-          class="pics1 btn3" data-toggle="modal" data-target="#myModal" onclick="getScizor()">
+          <img src="https://cdn.bulbagarden.net/upload/6/62/093Haunter.png"
+          class="pics1 btn3" data-toggle="modal" data-target="#myModal" onclick="getHaunter()">
         </div>
       </div>
     </div>
 
     <!-- Modal -->
  <div class="modal fade" id="myModal" role="dialog">
-   <div class="modal-dialog">
+   <div class="modal-dialog modal-dialog-centered">
 
 <!-- HEADER FOR MODAL -->
-     <div class="modal-content">
-       <div class="modal-header">
-         <button type="button" class="close" data-dismiss="modal">&times;</button>
-       </div>
+
 
        <!-- INPUTING PIC AND STATS -->
        <div class="modal-body">
            <div class="container2">
              <div class="row">
 
-               <div class="col-lg-8">
+               <div class="col-lg-6">
                  <img src="" id="sprite">
+               </div>
 
-               <div class="col-lg-4 justify-content-end">
+               <div class="col-lg-6" id="stats">
                  <span class="bold">Name: </span>
                  <span id="pokeName"></span>
                  <br>
@@ -80,7 +79,7 @@
    </div>
  </div>
 
-</div>
+
 
 
 

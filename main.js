@@ -14,11 +14,11 @@ class Trainer{
 
   get(name){
    if (name == "lucario") {
-     return getLucario();
-   } else if (name == "gengar") {
+     return getDusclops();
+   } else if (name == "dusclops") {
      return getGengar();
-   } else if (name == "scizor") {
-         return getScizor();
+   } else if (name == "haunter") {
+         return getHaunters();
        }
      }
 }
@@ -27,44 +27,45 @@ let trainer = new Trainer('Elite 4 Chris');
 
 
 class Pokemon {
-  constructor(name, hp, atk, def, abilities) {
+  constructor(name, hp, atk, def, abilities, image) {
     this.name = name;
     this.hp = hp;
     this.atk = atk;
     this.def = def;
     this.abilities = [];
+    this.image = image;
 
   }
 }
 // ============================
 //GETING LUCARIO FROM POKEMONAPI
-function getLucario() {
+function getDusclops() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
         data =  JSON.parse(this.responseText);
           // console.log(data);
           {
-          let lucario = {
+          let dusclops = {
               name: data.name,
               hp: data.stats[5].base_stat,
               attack: data.stats[4].base_stat,
               defense: data.stats[3].base_stat,
               ability1: data.abilities[0].ability.name,
-              ability2: data.abilities[1].ability.name,
-              ability3: data.abilities[2].ability.name
+              ability2: "none",
+              ability3: "none",
+              image: "https://im3.ezgif.com/tmp/ezgif-3-347b815d0760.gif"
             }
-            console.log(lucario);
-            POKEMON.push(lucario);
-            writeToScreen(lucario);
+            console.log(dusclops);
+            POKEMON.push(dusclops);
+            writeToScreen(dusclops);
       }
          }
     };
-    xhttp.open("GET", "http://fizal.me/pokeapi/api/v2/name/lucario.json", true);
+    xhttp.open("GET", "http://fizal.me/pokeapi/api/v2/name/dusclops.json", true);
     xhttp.send();
 };
 
-console.log(data);
  // ==========================
 //GETING GENGAR FROM POKEMONAPI
 function getGengar() {
@@ -80,6 +81,9 @@ function getGengar() {
               attack: data.stats[4].base_stat,
               defense: data.stats[3].base_stat,
               ability1: data.abilities[0].ability.name,
+              ability2: "none",
+              ability3: "none",
+              image: "https://i.imgur.com/rnebkT1.gif"
             }
             console.log(gengar);
             POKEMON.push(gengar);
@@ -96,31 +100,31 @@ function getGengar() {
 // ===========================
 //GETING SCIZOR FROM POKEMONAPI
 
-function getScizor() {
+function getHaunter() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
           data = JSON.parse(this.responseText);
           // console.log(data);
-            let scizor = {
+            let haunter = {
               name: data.name,
               attack: data.stats[4].base_stat,
               defense: data.stats[3].base_stat,
               ability1: data.abilities[0].ability.name,
-              ability2: data.abilities[1].ability.name,
-              ability3: data.abilities[2].ability.name
+              ability2: "none",
+              ability3: "none",
+              image: "https://media.giphy.com/media/MGndlZYnTsZAA/giphy.gif"
             }
-            console.log(scizor);
-            POKEMON.push(scizor);
-            writeToScreen(scizor);
+            console.log(haunter);
+            POKEMON.push(haunter);
+            writeToScreen(haunter);
 
         }
     };
-    xhttp.open("GET", "http://fizal.me/pokeapi/api/v2/name/scizor.json", true);
+    xhttp.open("GET", "http://fizal.me/pokeapi/api/v2/name/haunter.json", true);
     xhttp.send();
 
 }
-
 
 function writeToScreen(pokemon) {
   // grab html elements
@@ -140,32 +144,5 @@ function writeToScreen(pokemon) {
    pokeAbility1.innerHTML = pokemon.ability1;
    pokeAbility2.innerHTML = pokemon.ability2;
    pokeAbility3.innerHTML = pokemon.ability3;
-   
-
+   sprite.src = pokemon.image;
 }
-
-
-
-
-
-
-// //this function brings data to the html
-// // pokemon is a arbitary argument that will basically overridden
-// //by your pokemon name
-//
-// function writeToScreen(pokemon) {
-//   // GRAB HTML elements
-//   //Hint: make new spans/divs/<p> and give it an ID and grab it
-//   // make them variables
-//   var (exampleName) = (GRAB ID INTO HERE);
-//   // ** READ ** if you need a better idea
-//   // https://www.w3schools.com/js/js_htmldom_elements.asp
-//
-//   //=====================
-//   // after you grab you must relay this info into the element
-//   // use the variable name and put it into the html
-//   // ** READ ** if you need a better idea
-//   // https://www.w3schools.com/jsref/prop_html_innerhtml.asp
-//
-//
-// }
