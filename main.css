@@ -42,7 +42,7 @@ div .btn1:hover, .btn2:hover, .btn3:hover {
 }
 
 .modal-body {
-  background-image: url("http://clipartmag.com/images/black-and-white-borders-8.gif");
+  /* background-image: url("http://clipartmag.com/images/black-and-white-borders-8.gif"); */
   background-size: 100% 100%;
 }
 
