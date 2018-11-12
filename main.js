@@ -62,7 +62,7 @@ function getDusclops() {
       }
          }
     };
-    xhttp.open("GET", "http://fizal.me/pokeapi/api/v2/name/dusclops.json", true);
+    xhttp.open("GET", "https://fizal.me/pokeapi/api/v2/name/dusclops.json", true);
     xhttp.send();
 };
 
@@ -92,7 +92,7 @@ function getGengar() {
 
         }
     };
-    xhttp.open("GET", "http://fizal.me/pokeapi/api/v2/name/gengar.json", true);
+    xhttp.open("GET", "https://fizal.me/pokeapi/api/v2/name/gengar.json", true);
     xhttp.send();
 }
 
@@ -121,7 +121,7 @@ function getHaunter() {
 
         }
     };
-    xhttp.open("GET", "http://fizal.me/pokeapi/api/v2/name/haunter.json", true);
+    xhttp.open("GET", "https://fizal.me/pokeapi/api/v2/name/haunter.json", true);
     xhttp.send();
 
 }
