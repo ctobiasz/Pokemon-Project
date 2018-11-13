@@ -27,7 +27,9 @@ body {
 
 div .btn1:hover, .btn2:hover, .btn3:hover {
   transform: scale(1.1);
+  transition: transform 0.5s ease-out;
 }
+
 
 /* =========================== */
 
@@ -42,7 +44,9 @@ div .btn1:hover, .btn2:hover, .btn3:hover {
 }
 
 .modal-body {
-  background-image: url("http://clipartmag.com/images/black-and-white-borders-8.gif");
+  background-color: #CADC9F;
+  border-radius: 30%;
+  border: 5px solid black;
   background-size: 100% 100%;
 }
 
@@ -58,10 +62,9 @@ div .btn1:hover, .btn2:hover, .btn3:hover {
 #stats {
   margin-top: 60px;
 }
-
 /* =========TEXT========= */
 
 #stats {
   font-family: VT323;
-  font-size: 1.1em;
+  font-size: 1.5em;
 }

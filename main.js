@@ -54,7 +54,7 @@ function getDusclops() {
               ability1: data.abilities[0].ability.name,
               ability2: "none",
               ability3: "none",
-              image: "https://im3.ezgif.com/tmp/ezgif-3-347b815d0760.gif"
+              image: "dusclops.gif"
             }
             console.log(dusclops);
             POKEMON.push(dusclops);
@@ -62,7 +62,7 @@ function getDusclops() {
       }
          }
     };
-    xhttp.open("GET", "https://fizal.me/pokeapi/api/v2/name/dusclops.json", true);
+    xhttp.open("GET", "http://fizal.me/pokeapi/api/v2/name/dusclops.json", true);
     xhttp.send();
 };
 
@@ -92,7 +92,7 @@ function getGengar() {
 
         }
     };
-    xhttp.open("GET", "https://fizal.me/pokeapi/api/v2/name/gengar.json", true);
+    xhttp.open("GET", "http://fizal.me/pokeapi/api/v2/name/gengar.json", true);
     xhttp.send();
 }
 
@@ -121,7 +121,7 @@ function getHaunter() {
 
         }
     };
-    xhttp.open("GET", "https://fizal.me/pokeapi/api/v2/name/haunter.json", true);
+    xhttp.open("GET", "http://fizal.me/pokeapi/api/v2/name/haunter.json", true);
     xhttp.send();
 
 }
@@ -138,11 +138,12 @@ function writeToScreen(pokemon) {
    var pokeAbility2 = document.getElementById("pokeAbility2");
    var pokeAbility3 = document.getElementById("pokeAbility3");
 
-   pokeName.innerHTML = pokemon.name;
+   pokeName.innerHTML = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
    pokeAttack.innerHTML = pokemon.attack;
    pokeDefense.innerHTML = pokemon.defense;
-   pokeAbility1.innerHTML = pokemon.ability1;
-   pokeAbility2.innerHTML = pokemon.ability2;
-   pokeAbility3.innerHTML = pokemon.ability3;
+   pokeAbility1.innerHTML = pokemon.ability1.charAt(0).toUpperCase() + pokemon.ability1.slice(1);;
+   pokeAbility2.innerHTML = pokemon.ability2.charAt(0).toUpperCase() + pokemon.ability2.slice(1);;
+   pokeAbility3.innerHTML = pokemon.ability3.charAt(0).toUpperCase() + pokemon.ability3.slice(1);;
    sprite.src = pokemon.image;
+
 }
