@@ -1,3 +1,19 @@
+$auto-width: auto;
+
+%modal-settings {
+  background-color: #CADC9F;
+  border-radius: 30%;
+  border: 5px solid black;
+  background-size: 100% 100%;
+}
+
+%sprite-settings {
+  height: 200px;
+  width: $auto-width;
+  margin-top: 55px;
+
+}
+
 html {
   margin: 0;
 
@@ -6,7 +22,6 @@ body {
   background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/05/HD-desktop-nebula-backgrounds.jpg");
 }
 
-/* =========================== */
 
 #mainHead {
   display: flex;
@@ -27,9 +42,8 @@ body {
 
 div .btn1:hover, .btn2:hover, .btn3:hover {
   transform: scale(1.1);
+  transition: transform 0.5s ease-out;
 }
-
-/* =========================== */
 
 .container2 {
   height: 350px;
@@ -42,26 +56,20 @@ div .btn1:hover, .btn2:hover, .btn3:hover {
 }
 
 .modal-body {
-  background-image: url("http://clipartmag.com/images/black-and-white-borders-8.gif");
-  background-size: 100% 100%;
+@extend %modal-settings;
 }
 
-/* =========SPRITE========= */
 
 #sprite {
-  height: 200px;
-  width: auto;;
+  @extend %sprite-settings
 }
 
 
+#stats {
+  margin-top: 60px;
+}
 
-
-
-
-/*
-#2C3531 == Charcoal Grey
-#116466 == Ocean Blue
-#D9B08C == Light brown/grey
-#FFCB9A == Peach
-#D1E8E2 == Baby Blue
-*/
+#stats {
+  font-family: VT323;
+  font-size: 1.5em;
+}
